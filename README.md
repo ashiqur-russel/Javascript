@@ -1,4 +1,4 @@
-# THIS IS THE LEARNING PROJECT FROM "Codecademy.com"
+# THIS IS THE PROJECT FOLDER WHILE LEARNING COURSE FROM "Codecademy.com" (ONLY .Js FILE )
 
 ## Rock, Paper, or Scissors
 

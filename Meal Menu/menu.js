@@ -77,7 +77,15 @@ const Menu = {
 
         return `Your meal is ${appetizer.name}, ${main.name}, ... The price is ${totalPrice}.`;
         menu.addDishToCourse('appetizers', 'Caesar Salad', 4.25);
+        menu.addDishToCourse('appetizers', 'Muffin Fresh Chicken', 2.5);
 
+        menu.addDishToCourse('main', 'Royal Ts', 8);
+
+        menu.addDishToCourse('main', 'Siganture BBQ', 10.5);
+
+        menu.addDishToCourse('desserts', 'cokkie', 2.25);
+
+        menu.addDishToCourse('desserts', 'cake', 2.5);
     }
 
 };

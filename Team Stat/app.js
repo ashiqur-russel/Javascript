@@ -50,7 +50,20 @@ const team = {
         };
 
         this.players.push(player);
+    },
+
+    // add game method to add some info about oppenent name and point
+
+    addGame(oppName, teamPoint, oppPoint) {
+        const game = {
+            opponent: oppName,
+            points: teamPoint,
+            oppoPoint: oppPoint,
+        }
+
+        this.games.push(game);
     }
+
 
 
 };
@@ -63,3 +76,11 @@ team.addPlayers('Sarah', 'Conor', 23);
 team.addPlayers('Bruce', 'Jem', 26);
 
 console.log(team.players);
+
+// add opponent name and point details for testing
+
+team.addGame("Russia", 34, 28);
+team.addGame("Crotia", 34, 32);
+team.addGame("Germany", 34, 35);
+
+console.log(team.games);

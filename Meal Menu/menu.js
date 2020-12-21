@@ -86,9 +86,13 @@ const Menu = {
         menu.addDishToCourse('desserts', 'cokkie', 2.25);
 
         menu.addDishToCourse('desserts', 'cake', 2.5);
-    }
+    },
 
 };
+
+
+let meal = Menu.generateRandomMeal();
+console.log(meal);
 
 
 

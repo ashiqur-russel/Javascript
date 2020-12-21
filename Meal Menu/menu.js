@@ -47,7 +47,7 @@ const menu = {
             price: dishPrice
 
         };
-        return this._courses[courseName].push(dish);
+        this._courses[courseName].push(dish);
 
 
     },

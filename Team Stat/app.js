@@ -44,13 +44,22 @@ const team = {
 
     addPlayers(firstName, lastName, age) {
         let player = {
-            firstName: fisrstName,
+            firstName: firstName,
             lastName: lastName,
             age: age
         };
 
-        this.player.push(player);
+        this.players.push(player);
     }
 
 
 };
+
+// add player 
+
+team.addPlayers('Steph', 'Cury', 28);
+team.addPlayers('Sarah', 'Conor', 23);
+
+team.addPlayers('Bruce', 'Jem', 26);
+
+console.log(team.players);

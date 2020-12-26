@@ -17,7 +17,7 @@ class School {
         return this._numberOfStudents;
     }
     set numberOfStudents(noStudent) {
-        if (typeof noStudent === 'String') {
+        if (noStudent.isNan()) {
             console.log('Invalid input: numberOfStudents must be set to a Number.')
         }
         this._numberOfStudents = noStudent;
@@ -35,3 +35,34 @@ class School {
 
     }
 }
+
+class PrimarySchool extends School {
+    constructor(name, numberOfStudent, pickupPolicy) {
+        super(name, 'primary', numberOfStudent);
+        this._pickupPolicy = pickupPolicy;
+
+    }
+
+    get pickupPolicy() {
+        this._pickupPolicy = pickupPolicy;
+    }
+
+}
+
+class HighSchool extends School {
+    constructor(name, numberOfStudent, sportsTeams) {
+        super(name, 'high', numberOfStudents);
+        this._sportsTeams = _sportsTeams;
+
+    }
+
+    get _sportsTeams() {
+        this._sportsTeams = sportsTeams;
+    }
+
+}
+//instances of primary school
+const lorraineHansbury = new PrimarySchool('Lorraine Hansbury', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.');
+lorraineHansbury.quickFacts();
+
+PrimarySchool.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli']);

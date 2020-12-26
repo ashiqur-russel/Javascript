@@ -22,11 +22,45 @@ class Media {
         this.isCheckout = !this.isChekout;
     }
 
-    getAverageRating() {
-        let ratingAvg = this.ratings.reduce(acc)
+    etAverageRating() {
+        let ratingAvg = this.ratings.reduce(accumulator, ratings => accumulator + ratings);
+        return ratingAvg / this.ratings.length;
     }
 
-    addRating() { }
+    addRating(rate) {
+        this.ratings.push(rate);
+    }
+}
 
+class Book extends Media {
+    constructor(author, title, pages) {
+        super(title);
+        this._author = author;
+        this._pages = pages;
+    }
+
+    get author() {
+        return this._author;
+    }
+    get pages() {
+        return this._pages;
+    }
 
 }
+
+class Movie extends Media {
+    constructor(director, title, runTime) {
+        super(title);
+        this._director = director;
+        this._runTime = runTime;
+    }
+
+    get director() {
+        return this._director;
+    }
+    get runTime() {
+        return this._runTime;
+    }
+
+}
+

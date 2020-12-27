@@ -14,6 +14,7 @@ const background = (
 )
 
 const images = [];
+const showBackground = true;
 
 for (const animal in animals) {
     images.push(
@@ -24,8 +25,18 @@ for (const animal in animals) {
             src={animals[animal].image}
             arialabel={animal}
             role='button'
+            onClick={displayFact}
         />
     )
+}
+
+function displayFact(e) {
+    const selectedAnimal = e.target.alt;
+    const animalInfo = animals[selectedAnimal];
+    const optionIndex = Math.floor(Math.random() * animalInfo.facts.length);
+
+    const funFact = animalInfo.facts[optionIndex];
+    document.getElementById("fact").innerHTML = funFact;
 }
 
 
@@ -34,7 +45,8 @@ const animalFacts = (
         <h1>
             {title == "" ? "Click an animal for a fun       fact" : title}
         </h1>
-        {background}
+        {showBackground && background}
+        <p id='fact'></p>
         <div className='animals'>
             {images}
         </div>

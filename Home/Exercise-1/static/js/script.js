@@ -18,6 +18,3 @@ function promptAge(){
 function reset(){
     document.getElementById('agindays').remove();
 }
-
-
-

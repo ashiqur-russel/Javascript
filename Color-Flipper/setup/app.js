@@ -14,7 +14,7 @@ btn.addEventListener("click",function(){
 
 function getRandomNumber(){
     let color = Math.floor(Math.random() * colors.length);
-   // console.log(color);
+    console.log(color);
     return color;
  }
 

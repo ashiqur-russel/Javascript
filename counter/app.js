@@ -9,12 +9,8 @@ let counter = 0;
 
 //Event listener for Increase Value
 btn_increase.addEventListener("click",function(){
-        counter++;
-        
-        value.innerHTML = counter;
-
-        
-       
+        counter++;   
+        value.innerHTML = counter;    
 })
 
 //Event listener for Decrease Value
@@ -27,7 +23,3 @@ btn_reset.addEventListener("click",function(){
     counter = 0;
     value.innerHTML = counter;
 })
-
-
-
-

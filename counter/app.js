@@ -5,12 +5,16 @@ const btn_decrease = document.getElementById("btn1");
 const value = document.querySelector(".value"); 
 
 
-let counter = null;
+let counter = 0;
 
 //Event listener for Increase Value
 btn_increase.addEventListener("click",function(){
         counter++;
+        
         value.innerHTML = counter;
+
+        
+       
 })
 
 //Event listener for Decrease Value

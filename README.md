@@ -1,12 +1,12 @@
-# THIS IS THE PROJECT FOLDER WHILE LEARNING COURSE FROM "Codecademy.com" (ONLY .Js FILE )
+# This is Repository where I pushed all my javascript code during learning also basic projects !
 
-## Rock, Paper, or Scissors
+## Code Materials 
 
-Rock paper scissors is a classic two player game. Each player chooses either rock, paper, or scissors. The items are compared, and whichever player chooses the more powerful item wins.
 
-## Our code will break the game into four parts:
 
-        1. Get the user’s choice.
-        2. Get the computer’s choice.
-        3. Compare the two choices and determine a winner.
-        4. Start the program and display the results.
+## All the codes in this repo I wrote from differenet soureces and Books(Eg.)
+
+        1. Youtube.com
+        2. Codecademy.com
+        3. Udemy.com
+        4. freecodecamp.org

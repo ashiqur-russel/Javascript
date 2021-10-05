@@ -4,7 +4,7 @@
 
 
 
-## All the codes in this repo I wrote from differenet soureces and Books(Eg.)
+## All the codes in this repo I have practiced from different soureces and Books(Eg.)
 
         1. Youtube.com
         2. Codecademy.com

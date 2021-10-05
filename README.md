@@ -1,4 +1,4 @@
-# This is Repository where I pushed all my javascript code during learning also basic projects !
+# This is the Repository where I pushed all my javascript code during learning also basic projects !
 
 ## Code Materials 
 

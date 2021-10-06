@@ -1,7 +1,6 @@
 // local reviews data
 const reviews = [
   {
-    id: 1,
     name: "susan smith",
     job: "web developer",
     img:

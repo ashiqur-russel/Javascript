@@ -24,7 +24,7 @@ const reviews = [
     img:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
     text:
-      "Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.",
+      "peter jones,Sriracha literally flexitarian irony, vape marfa unicorn. Glossier tattooed 8-bit, fixie waistcoat offal activated charcoal slow-carb marfa hell of pabst raclette post-ironic jianbing swag.",
   },
   {
     id: 4,
@@ -33,6 +33,33 @@ const reviews = [
     img:
       "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg",
     text:
-      "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
+      "bill,Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
   },
 ];
+
+
+//Select Items
+const img = document.getElementById("person-img");
+const author = document.getElementById("author");
+const job = document.getElementById("job");
+const info = document.getElementById("info");
+
+
+//Button select
+const next_btn = document.querySelector(".next-btn");
+const prev_btn = document.querySelector(".prev-btn");
+const rand_btn = document.querySelector(".random-btn");
+
+
+//Set starting item
+
+let current_item = 2;
+
+//Load initial item
+window.addEventListener("DOMContentLoaded",function(){
+    const item = reviews[current_item];
+    img.src = item.img;
+    author.textContent = item.name;
+    job.textContent = item.job;
+    info.textContent= item.text;
+});

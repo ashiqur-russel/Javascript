@@ -1,0 +1,64 @@
+body {
+  background-color: rgb(255, 203, 106);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30em;
+  height: 18em;
+  margin-top: -9em; /*set to a negative number 1/2 of your height*/
+  margin-left: -15em; /*set to a negative number 1/2 of your width*/
+  border: rgb(216, 200, 200);
+  border-radius: 4px;
+  background: url(./plane1.jpeg);
+}
+.heading {
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  color: azure;
+  padding: 10px;
+}
+
+.count-el {
+  font-size: 2rem;
+  text-align: center;
+  color: azure;
+}
+
+.button {
+  position: relative;
+  left: 30%;
+  background-color: #eaf5ea; /* Green */
+  border: none;
+  color: rgb(29, 26, 26);
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(197, 52, 52);
+  color: white;
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
+  background-color: rgb(32, 87, 37);
+  color: white;
+}

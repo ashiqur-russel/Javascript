@@ -30,10 +30,6 @@ save.addEventListener("click",function(){
     value1.innerHTML = countStr;
 
 
-
-
-
-
 })
 
 

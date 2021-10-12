@@ -13,21 +13,24 @@ const value1    = document.getElementById("save");
 //Increase button functionality 
 increase.addEventListener("click",function(){
     counter++;
-    value.innerText= counter;
+    value.textContent= counter;
 })
 
 //Decrease button functionality 
 decrease.addEventListener("click",function(){
     counter--;
-    value.innerText= counter;
+    value.textContent= counter;
 })
 // Save button functionality
 save.addEventListener("click",function(){
 
-    let countStr = counter + " - ";
+    let countStr = counter + " : ";
     console.log(countStr);
-    value1.innerHTML += countStr;
+    value1.textContent += countStr;
+    value.textContent = 0;
+    counter = 0;
 })
+
 
 
 

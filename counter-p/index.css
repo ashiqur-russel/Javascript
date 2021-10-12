@@ -70,3 +70,10 @@ p {
   font-size: large;
   color: #eaf5ea;
 }
+
+.entry {
+  background: #c25648;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 6px;
+}

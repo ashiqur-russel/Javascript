@@ -10,9 +10,10 @@ body {
   top: 50%;
   left: 50%;
   width: 30em;
-  height: 18em;
+  height: 30em;
   margin-top: -9em; /*set to a negative number 1/2 of your height*/
   margin-left: -15em; /*set to a negative number 1/2 of your width*/
+
   border: rgb(216, 200, 200);
   border-radius: 4px;
   background: url(./plane1.jpeg);
@@ -33,7 +34,7 @@ body {
 
 .button {
   position: relative;
-  left: 30%;
+  left: 18%;
   background-color: #eaf5ea; /* Green */
   border: none;
   color: rgb(29, 26, 26);
@@ -61,4 +62,11 @@ body {
 
   background-color: rgb(32, 87, 37);
   color: white;
+}
+
+p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: large;
+  color: #eaf5ea;
 }

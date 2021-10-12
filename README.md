@@ -1,10 +1,7 @@
 # This is the Repository where I pushed all my javascript code during learning also basic projects !
 
-## Code Materials 
+## Code Material Sources --> 
 
-
-
-## All the codes in this repo I have practiced from different soureces and Books(Eg.)
 
         1. Youtube.com
         2. Codecademy.com

@@ -1,5 +1,23 @@
 //document.getElementById("res").innerText= 6;
 
-let count = 0;
+let counter = 0;
 
-function 
+
+const increase = document.getElementById("increase");
+const decrease = document.getElementById("decrease");
+
+const value = document.getElementById("res");
+
+increase.addEventListener("click",function(){
+    counter++;
+    value.innerText= counter;
+})
+
+
+decrease.addEventListener("click",function(){
+    counter--;
+    value.innerText= counter;
+})
+
+
+

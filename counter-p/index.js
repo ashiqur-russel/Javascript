@@ -27,9 +27,9 @@ save.addEventListener("click",function(){
 
     let countStr = counter + " - ";
     console.log(countStr);
-    value1.innerHTML = countStr;
+    value1.innerHTML += countStr;
 
-
+   
 })
 
 

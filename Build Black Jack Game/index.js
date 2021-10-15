@@ -1,9 +1,7 @@
-let firstCard = 10;
-let secondCard= 4;
-let cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
-let hasBlackJack = false;
-let isAlive = true;
+let allCard = [1,2,3,4,5,6,7,8,9,10,11];
+
+let cards = [];
+let sum = 0;
 let message = "";
 
 let messageShow = document.getElementById("message-el");
@@ -12,11 +10,20 @@ let cardShow = document.querySelector("#cards-el");
 
 //Start Game
 function startGame(){
-renderGame();
+
+    // If sum is = only button will function
+    if(cards.length === 0){
+        var firstCard = allCard[Math.floor(Math.random()*allCard.length)];
+        var secondCard = allCard[Math.floor(Math.random()*allCard.length)];
+        cards.push(firstCard);
+        cards.push(secondCard);
+        sum = firstCard + secondCard;
+        renderGame();
+    }
+
+
 }
 function renderGame(){
-
-
     for( let i = 0; i<cards.length;i++){
         cardShow.textContent = "Cards :"+cards+" ";
     }
@@ -26,10 +33,9 @@ function renderGame(){
         message = "Do you want to draw a new card again? ";   
     }else if(sum === 21){
         message = "You have got BlackJack!";
-        let hasBlackJack = true;
     }else{
         message = " You are out of the game!";
-        isAlive = false;
+        return;
     }
     messageShow.textContent = message;
 
@@ -37,19 +43,32 @@ function renderGame(){
 
 
 function newCard(){
+    // If sum is = only button will function
+        if(cards.length === 0){
+
+        message = "Please Start Game first!"; 
+        messageShow.textContent = message;
+        return;
+    }
     let randomCard = [6,4,7];
     var randomItem = randomCard[Math.floor(Math.random()*randomCard.length)];
    // console.log(randomCard);
-    console.log(randomItem);
     cards.push(randomItem);
     console.log(cards);
     sum +=randomItem;
+    if( sum >21){
+        message = "You are over 21 point ! Please start again";   
+            messageShow.textContent = message;
+
+        return;
+    }else{
     renderGame();
-
-
+    } 
     for( let i = 0; i<cards.length;i++){
         cardShow.textContent = "Cards :"+cards+" ";
     }
+
+    
 
 }
 

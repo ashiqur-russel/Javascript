@@ -1,5 +1,6 @@
 // Array
 
+/*
 let cards = [7,3,9];
 
 
@@ -29,3 +30,23 @@ for( let i in message){
     console.log(message[i]);
 }
 
+
+
+*/
+
+let cards = [];
+console.log("Cards :"+cards);
+let sum = 0;
+let allCard = [1,2,3,4,5,6,7,8,9,10,11];
+console.log("All Cards :"+allCard);
+var firstCard = allCard[Math.floor(Math.random()*allCard.length)];
+var secondCard = allCard[Math.floor(Math.random()*allCard.length)];
+console.log("First Card :"+firstCard)
+console.log("Second Card :"+secondCard)
+
+cards.push(firstCard);
+cards.push(secondCard);
+console.log("Cards :"+cards);
+
+
+        

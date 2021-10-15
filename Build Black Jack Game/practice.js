@@ -1,6 +1,7 @@
 // Array
 
-let cards = [7,4];
+let cards = [7,3,9];
+
 
 cards.push(6);
 
@@ -21,3 +22,10 @@ console.log(message);
 // remove last item from array list
 let lastItem = message.pop();
 console.log(lastItem);
+
+// show All message using loop
+
+for( let i in message){
+    console.log(message[i]);
+}
+

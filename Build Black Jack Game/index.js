@@ -16,7 +16,10 @@ renderGame();
 }
 function renderGame(){
 
-    cardShow.textContent = "Card : "+cards[0]+" "+cards[1];
+
+    for( let i = 0; i<cards.length;i++){
+        cardShow.textContent = "Cards :"+cards+" ";
+    }
 
     sumShow.textContent = "Sum : "+sum;
     if(sum<=20){
@@ -42,6 +45,11 @@ function newCard(){
     console.log(cards);
     sum +=randomItem;
     renderGame();
-    cardShow.textContent = "Cards : "+cards[0]+" "+cards[1]+" "+randomItem;
+
+
+    for( let i = 0; i<cards.length;i++){
+        cardShow.textContent = "Cards :"+cards+" ";
+    }
+
 }
 

@@ -33,6 +33,7 @@ function renderGame(){
         message = "Do you want to draw a new card again? ";   
     }else if(sum === 21){
         message = "You have got BlackJack!";
+        return;
     }else{
         message = " You are out of the game!";
         return;
@@ -45,13 +46,12 @@ function renderGame(){
 function newCard(){
     // If sum is = only button will function
         if(cards.length === 0){
-
         message = "Please Start Game first!"; 
         messageShow.textContent = message;
         return;
     }
-    let randomCard = [6,4,7];
-    var randomItem = randomCard[Math.floor(Math.random()*randomCard.length)];
+
+    var randomItem = allCard[Math.floor(Math.random()*allCard.length)];
    // console.log(randomCard);
     cards.push(randomItem);
     console.log(cards);

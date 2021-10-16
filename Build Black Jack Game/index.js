@@ -1,9 +1,7 @@
 let allCard = [1,2,3,4,5,6,7,8,9,10,11];
-
 let cards = [];
 let sum = 0;
 let message = "";
-
 let messageShow = document.getElementById("message-el");
 let sumShow = document.querySelector("#sum-el");
 let cardShow = document.querySelector("#cards-el");
@@ -20,15 +18,14 @@ function startGame(){
         sum = firstCard + secondCard;
         renderGame();
     }
-
-
 }
+
+// Function fro the ener game
 function renderGame(){
+        sumShow.textContent = "Sum : "+sum;
     for( let i = 0; i<cards.length;i++){
         cardShow.textContent = "Cards :"+cards+" ";
     }
-
-    sumShow.textContent = "Sum : "+sum;
     if(sum<=20){
         message = "Do you want to draw a new card again? ";   
     }else if(sum === 21){
@@ -39,12 +36,12 @@ function renderGame(){
         return;
     }
     messageShow.textContent = message;
-
 }
 
+// function for the drawong new card
 
 function newCard(){
-    // If sum is = only button will function
+    // Check draw card button work before start gane or not
         if(cards.length === 0){
         message = "Please Start Game first!"; 
         messageShow.textContent = message;
@@ -56,14 +53,18 @@ function newCard(){
     cards.push(randomItem);
     console.log(cards);
     sum +=randomItem;
-    if( sum >21){
-        message = "You are over 21 point ! Please start again";   
-            messageShow.textContent = message;
 
-        return;
+    // check if point is over 21 then return
+    if( sum >21){
+        message = " You are out of the game!";
+        messageShow.textContent = message;
+        sumShow.textContent = "Sum : "+sum;
+        return;       
     }else{
     renderGame();
     } 
+
+    // loop for showing all the card sshowing from card array 
     for( let i = 0; i<cards.length;i++){
         cardShow.textContent = "Cards :"+cards+" ";
     }

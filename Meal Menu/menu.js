@@ -67,7 +67,7 @@ const menu = {
         const totalPrice = appetizer.price + mains.price + desserts.price;
 
 
-        return `Your meal is ${appetizer.name}, ${main.name}, ... The price is ${totalPrice}.`;
+        return `Your meal is ${appetizer.name}, ${mains.name}, ... The price is ${totalPrice}.`;
 
     },
 

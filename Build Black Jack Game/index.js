@@ -14,17 +14,14 @@ let player = {
     chips : 145
 }
 
+// function for getting player after win blackjack
 function getPlayerName(){
-
     let PlayerName = player.name;
     let playerChips = player.chips;
     playerShow.textContent = PlayerName + " : $"+playerChips;
     console.log(PlayerName);
 
 }
-
-
-
 
 //Start Game
 function startGame(){
@@ -53,11 +50,9 @@ function getRandomCard() {
 function renderGame(){
 
     cardShow.textContent = "Cards: "
-
     for (let i = 0; i < cards.length; i++) {
         cardShow.textContent += cards[i] + " "
-    }
-    
+    } 
     sumShow.textContent = "Sum: " + sum
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
@@ -69,15 +64,13 @@ function renderGame(){
         } 
     } else {
         message = "You're out of the game!"
-        isAlive = false
-        
+        isAlive = false   
     }
     messageShow.textContent = message
 }       
 
 function newCard(){
     // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
-
     if(isAlive === true && hasBlackJack === false){
             let card = getRandomCard()
             sum += card

@@ -46,9 +46,9 @@ console.log("Second Card :"+secondCard)
 
 cards.push(firstCard);
 cards.push(secondCard);
-console.log("Cards :"+cards);
+
 
 var randomItem = allCard[Math.floor(Math.random()*allCard.length)];
 
 
-                var firstCard = allCard[Math.floor(Math.random()*allCard.length)];
+var firstCard = allCard[Math.floor(Math.random()*allCard.length)];

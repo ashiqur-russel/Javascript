@@ -1,75 +1,66 @@
-let allCard = [1,2,3,4,5,6,7,8,9,10,11];
 let cards = [];
 let sum = 0;
+let hasBlackJack = false;
+let isAlive = false;
 let message = "";
 let messageShow = document.getElementById("message-el");
 let sumShow = document.querySelector("#sum-el");
 let cardShow = document.querySelector("#cards-el");
 
+
+
+
 //Start Game
 function startGame(){
 
-    // If sum is = only button will function
-    if(cards.length === 0){
-        var firstCard = allCard[Math.floor(Math.random()*allCard.length)];
-        var secondCard = allCard[Math.floor(Math.random()*allCard.length)];
-        cards.push(firstCard);
-        cards.push(secondCard);
-        sum = firstCard + secondCard;
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
         renderGame();
+    
+}
+
+function getRandomCard() {
+    let randomNumer = Math.floor( Math.random()*13 ) + 1
+    if (randomNumer > 10) {
+        return 10
+    } else if (randomNumer === 1) {
+        return 11
+    } else {
+        return randomNumer
     }
 }
 
-// Function fro the ener game
+// Function fro the render game
 function renderGame(){
-        sumShow.textContent = "Sum : "+sum;
-    for( let i = 0; i<cards.length;i++){
-        cardShow.textContent = "Cards :"+cards+" ";
+
+    cardShow.textContent = "Cards: "
+
+    for (let i = 0; i < cards.length; i++) {
+        cardShow.textContent += cards[i] + " "
     }
-    if(sum<=20){
-        message = "Do you want to draw a new card again? ";   
-    }else if(sum === 21){
-        message = "You have got BlackJack!";
-        return;
-    }else{
-        message = " You are out of the game!";
-        return;
+    
+    sumShow.textContent = "Sum: " + sum
+    if (sum <= 20) {
+        message = "Do you want to draw a new card?"
+    } else if (sum === 21) {
+        message = "You've got Blackjack!"
+        hasBlackJack = true
+    } else {
+        message = "You're out of the game!"
+        isAlive = false
     }
-    messageShow.textContent = message;
-}
+    messageShow.textContent = message
+}       
 
 // function for the drawong new card
 
 function newCard(){
-    // Check draw card button work before start gane or not
-        if(cards.length === 0){
-        message = "Please Start Game first!"; 
-        messageShow.textContent = message;
-        return;
-    }
-
-    var randomItem = allCard[Math.floor(Math.random()*allCard.length)];
-   // console.log(randomCard);
-    cards.push(randomItem);
-    console.log(cards);
-    sum +=randomItem;
-
-    // check if point is over 21 then return
-    if( sum >21){
-        message = " You are out of the game!";
-        messageShow.textContent = message;
-        sumShow.textContent = "Sum : "+sum;
-        return;       
-    }else{
-    renderGame();
-    } 
-
-    // loop for showing all the card sshowing from card array 
-    for( let i = 0; i<cards.length;i++){
-        cardShow.textContent = "Cards :"+cards+" ";
-    }
-
-    
-
+    // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
+    let card = getRandomCard()
+    sum += card
+    cards.push(card)
+    renderGame()  
 }
-

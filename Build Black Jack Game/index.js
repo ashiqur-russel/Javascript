@@ -7,6 +7,22 @@ let messageShow = document.getElementById("message-el");
 let sumShow = document.querySelector("#sum-el");
 let cardShow = document.querySelector("#cards-el");
 
+// Add player
+let playerShow = document.querySelector(".player-name");
+let player = {
+    name: "John",
+    chips : 145
+}
+
+function getPlayerName(){
+
+    let PlayerName = player.name;
+    let playerChips = player.chips;
+    playerShow.textContent = PlayerName + " : $"+playerChips;
+    console.log(PlayerName);
+
+}
+
 
 
 
@@ -48,6 +64,9 @@ function renderGame(){
     } else if (sum === 21) {
         message = "You've got Blackjack!"
         hasBlackJack = true
+        if(hasBlackJack) {
+            getPlayerName();
+        } 
     } else {
         message = "You're out of the game!"
         isAlive = false

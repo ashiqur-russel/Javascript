@@ -11,7 +11,7 @@ let cardShow = document.querySelector("#cards-el");
 let playerShow = document.querySelector(".player-name");
 let player = {
     name: "John",
-    chips : 145
+    chips : 145,
 }
 
 // function for getting player after win blackjack

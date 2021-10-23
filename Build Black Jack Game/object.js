@@ -1,5 +1,4 @@
 
-   
 // Objects - store data in-depth - composite / complex data type
 // key-value pairs
 
@@ -13,15 +12,16 @@ let course = {
     tags: ["html", "css"]
 }
 
-    
-   
+// Create a person object that contains some key
 
-const materials = [
-  'Hydrogen',
-  'Helium',
-  'Lithium',
-  'Beryllium'
-];
+let person = {
+    name:"Hassan",
+    age : 35,
+    country : "Bangladesh"
+}
+// create function that uses the person to set values
+function logData(){
+    console.log(person.name +" is " +person.age+" years old and lives in "+person.country);
+}
 
-console.log(materials.map(material => material.length));
-// expected output: Array [8, 6, 7, 9]
+logData();

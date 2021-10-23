@@ -15,6 +15,8 @@ const ulEl = document.getElementById("ul-el")
 inputBtn.addEventListener("click", function() {
         // Push the value from the inputEl into the myLeads array 
         myLeads.push(inputEl.value)
+        //clear the input
+        inputEl.value = ""
         renderLeads()
 
 })
@@ -23,7 +25,13 @@ function renderLeads() {
     // Assign it to an empty string to begin with
     let listItems = ""
     for (let i = 0; i < myLeads.length; i++) {
-        listItems += "<li>" + myLeads[i] + "</li>"
+        listItems += `
+            <li>
+                <a target='_blank' href='${myLeads[i]}'>
+                    ${myLeads[i]}
+                </a>
+            </li>
+        `
     }
     ulEl.innerHTML = listItems  
 }

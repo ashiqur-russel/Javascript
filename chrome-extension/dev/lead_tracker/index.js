@@ -6,22 +6,14 @@
 
 let myLeads = [];
 
-/* let myLeads =`["www.facebook.com"]`
-myLeads = JSON.parse(myLeads);
-myLeads.push("www.hello.com");
-myLeads =JSON.stringify(myLeads);
-console.log(typeof myLeads); */
-
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
-//Local storage
-//localStorage.setItem("myName","Ashiqur Russel")
-
-// let Myname = localStorage.getItem("myName");
-// console.log(Myname)
-
+// Get the input data from local storage & store it a variable
+let dataFromStorage = JSON.parse(localStorage.getItem("myLeads"));
+console.log(dataFromStorage)
+ 
 
 inputBtn.addEventListener("click", function() {
         // Push the value from the inputEl into the myLeads array 

@@ -12,19 +12,20 @@ const ulEl = document.getElementById("ul-el")
 
 // Get the input data from local storage & store it a variable
 let dataFromStorage = JSON.parse(localStorage.getItem("myLeads"));
+
+if(dataFromStorage){                                                 // if there is data fetch and show
+    myLeads = dataFromStorage
+    renderLeads()
+}
 console.log(dataFromStorage)
  
 
 inputBtn.addEventListener("click", function() {
-        // Push the value from the inputEl into the myLeads array 
-        myLeads.push(inputEl.value)
+        myLeads.push(inputEl.value)                                  // Push the value from the inputEl into the myLeads array 
         inputEl.value = ""
-        // save the myLeads array to local storage and turn string
-        localStorage.setItem("myLeads",JSON.stringify(myLeads));
-        //clear the input
-        renderLeads()
+        localStorage.setItem("myLeads",JSON.stringify(myLeads));     // save the myLeads array to local storage and turn string
+        renderLeads()                                                //clear the input
         console.log(localStorage.getItem("myLeads"))
-
 })
 
 function renderLeads() {

@@ -17,3 +17,10 @@ let fullPrice = basePrice - discount + shippingCost
 
 // Finally, notifying the customer
 console.log("Total cost: " + fullPrice + ". It will arrive in " + shippingTime)
+
+//template string literals
+const recipient = "James";
+const sender = "Per Harald Borgen"
+// Break the email string into multiple lines
+const email = `Hey ${recipient}! How is it going? Cheers ${sender}`;
+console.log(email);

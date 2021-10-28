@@ -8,10 +8,12 @@ let myLeads = [];
 
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
+const deleteBtn = document.getElementById("delete-btn")
+
 const ulEl = document.getElementById("ul-el")
 
 // Get the input data from local storage & store it a variable
-let dataFromStorage = JSON.parse(localStorage.getItem("myLeads"));
+const dataFromStorage = JSON.parse(localStorage.getItem("myLeads"));
 
 if(dataFromStorage){                                                 // if there is data fetch and show
     myLeads = dataFromStorage
@@ -25,6 +27,13 @@ inputBtn.addEventListener("click", function() {
         localStorage.setItem("myLeads",JSON.stringify(myLeads));     // save the myLeads array to local storage and turn string
         renderLeads()                                                //clear the input
         console.log(localStorage.getItem("myLeads"))
+})
+
+deleteBtn.addEventListener("click",function(){
+    console.log("double clicked");
+    localStorage.clear();
+    myLeads =[];
+    renderLeads();
 })
 
 function renderLeads() {

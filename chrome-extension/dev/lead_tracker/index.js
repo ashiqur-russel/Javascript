@@ -17,8 +17,7 @@ if(dataFromStorage){                                                 // if there
     myLeads = dataFromStorage
     renderLeads()
 }
-console.log(dataFromStorage)
- 
+console.log(dataFromStorage) 
 
 inputBtn.addEventListener("click", function() {
         myLeads.push(inputEl.value)                                  // Push the value from the inputEl into the myLeads array 

@@ -4,7 +4,7 @@
 // myLeads -> should be assigned to an empty array
 // inputEl -> should be assigned to the text input field
 
-let myLeads = [];
+let myLeads = []
 
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
@@ -14,7 +14,7 @@ const tabBtn = document.getElementById("tab-btn")
 const tabs = [{url :"https://github.com/ashiqur-russel"}]
 
 // Get the input data from local storage & store it a variable
-const dataFromStorage = JSON.parse(localStorage.getItem("myLeads"));
+const dataFromStorage = JSON.parse(localStorage.getItem("myLeads"))
 
 if(dataFromStorage){                                                 // if there is data fetch and show
     myLeads = dataFromStorage
@@ -24,21 +24,27 @@ if(dataFromStorage){                                                 // if there
 inputBtn.addEventListener("click", function() {
         myLeads.push(inputEl.value)                                  // Push the value from the inputEl into the myLeads array 
         inputEl.value = ""
-        localStorage.setItem("myLeads",JSON.stringify(myLeads));     // save the myLeads array to local storage and turn string
+        localStorage.setItem("myLeads",JSON.stringify(myLeads))    // save the myLeads array to local storage and turn string
         render(myLeads)                                                //clear the input
         console.log(localStorage.getItem("myLeads"))
 })
 
 deleteBtn.addEventListener("click",function(){
-    localStorage.clear();
-    myLeads =[];
-    render(myLeads);
+    localStorage.clear()
+    myLeads =[]
+    render(myLeads)
 })
 
 tabBtn.addEventListener("click",function(){
-    myLeads.push(tabs[0].url)
-    localStorage.setItem("myLeads",JSON.stringify(myLeads))
-    render(myLeads)
+    //chrome.tabs.query({active: true, currentWindow: true}, function(tabs){ })
+
+    chrome.tabs.query({active:true, currentWindow:true},function(tabs){
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myLeads",JSON.stringify(myLeads))
+        render(myLeads)
+    })
+
+    
 })
 
 function render(leads) {

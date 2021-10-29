@@ -17,9 +17,8 @@ const dataFromStorage = JSON.parse(localStorage.getItem("myLeads"));
 
 if(dataFromStorage){                                                 // if there is data fetch and show
     myLeads = dataFromStorage
-    renderLeads()
+    renderLeads(myLeads)
 }
-console.log(dataFromStorage) 
 
 inputBtn.addEventListener("click", function() {
         myLeads.push(inputEl.value)                                  // Push the value from the inputEl into the myLeads array 
@@ -30,20 +29,20 @@ inputBtn.addEventListener("click", function() {
 })
 
 deleteBtn.addEventListener("click",function(){
-    console.log("double clicked");
     localStorage.clear();
     myLeads =[];
-    renderLeads();
+    renderLeads(myLeads);
 })
 
-function renderLeads() {
+
+function renderLeads(leads) {
     // Assign it to an empty string to begin with
     let listItems = ""
-    for (let i = 0; i < myLeads.length; i++) {
+    for (let i = 0; i < leads.length; i++) {
         listItems += `
             <li>
-                <a target='_blank' href='${myLeads[i]}'>
-                    ${myLeads[i]}
+                <a target='_blank' href='${leads[i]}'>
+                    ${leads[i]}
                 </a>
             </li>
         `

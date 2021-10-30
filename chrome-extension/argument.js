@@ -13,11 +13,14 @@ saveBtn.addEventListener("click",function(){
     
 })
 
+deleteBtn.addEventListener("click",function(){
+    localStorage.clear()
+    Data=[]
+    renderData();
+})
+
 
 function renderData(){
-
-
-
      // Assign it to an empty string to begin with
     let listItems = ""
     for (let i = 0; i < Data.length; i++) {
